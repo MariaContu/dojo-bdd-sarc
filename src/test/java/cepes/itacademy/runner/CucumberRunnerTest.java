@@ -10,7 +10,7 @@ import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features") // Aponta para a pasta src/test/resources/features
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "br.pucrs.itacademy.steps") // Aponta para o pacote dos steps
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "steps") // Aponta para o pacote dos steps
 public class CucumberRunnerTest {
     // A classe permanece vazia. Ela serve apenas como âncora para as anotações.
 }
