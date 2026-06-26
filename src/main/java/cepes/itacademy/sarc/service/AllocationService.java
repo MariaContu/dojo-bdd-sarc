@@ -69,18 +69,12 @@ public class AllocationService {
         String alreadyType = alreadyAllocatedResource.getClass().getSimpleName();
         String newType = newResource.getClass().getSimpleName();
 
-        boolean twoNotebooks =
-                alreadyType.equalsIgnoreCase("notebook")
-                        && newType.equalsIgnoreCase("notebook");
-
-        boolean labAndNotebook =
-                alreadyType.equalsIgnoreCase("lab")
-                        && newType.equalsIgnoreCase("notebook");
-
-        boolean labAndRoom =
-                alreadyType.equalsIgnoreCase("lab")
-                        && newType.equalsIgnoreCase("room");
-
-        return twoNotebooks || labAndNotebook || labAndRoom;
+        if(alreadyType.equalsIgnoreCase(newType)) {
+            return true;
+        }
+        if (alreadyType.equalsIgnoreCase("lab") || newType.equalsIgnoreCase("lab")) {
+            return true;
+        }
+        return false;
     }
 }

@@ -14,8 +14,6 @@ public class InMemoryResourceRepository implements ResourceRepository {
         resources.add(new Notebook("CEPES1995", LocalDate.of(2023, 6, 1), "Dell Inspiron"));
         resources.add(new Notebook("CEPES2017", LocalDate.of(2024, 2, 15), "Dell Alienware"));
         resources.add(new Notebook("CEPES1984", LocalDate.of(2023, 8, 20), "Dell XPS"));
-
-
         resources.add(new Room("512", 30, false));
         resources.add(new Room("511", 35, true));
         resources.add(new Room("401", 40, true));
